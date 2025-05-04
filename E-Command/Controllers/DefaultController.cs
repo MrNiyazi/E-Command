@@ -8,5 +8,10 @@ namespace E_Command.Controllers
 		{
 			return View();
 		}
+
+		public IActionResult About()
+		{
+			return View();
+		}
 	}
 }
