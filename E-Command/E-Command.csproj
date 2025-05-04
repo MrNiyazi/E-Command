@@ -7,4 +7,17 @@
     <RootNamespace>E_Command</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="wwwroot\e-ticaretwebsite\.vs\e-ticaretwebsite\v17\DocumentLayout.json" />
+    <Content Include="wwwroot\e-ticaretwebsite\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\e-ticaretwebsite\.vs\slnx.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+  </ItemGroup>
+
 </Project>
