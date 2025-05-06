@@ -2,13 +2,12 @@
 
 namespace E_Command.Models.Class
 {
-	public class Admin
+	public class Category
 	{
 		[Key]
 		public int Id { get; set; }
 		[Required]
+		[StringLength(100)]
 		public string Name { get; set; }
-		[Required]
-		public string Password { get; set; }
 	}
 }
