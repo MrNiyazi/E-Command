@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+
 
 namespace E_Command.Models.Class
 
@@ -11,6 +12,15 @@ namespace E_Command.Models.Class
 		public DbSet<Contact> Contacts { get; set; }
 		public DbSet<HomePage> HomePages { get; set; }
 		public DbSet<Product> Products { get; set; }
-		public DbSet<SocialMedia> SocialMedias {  get; set; } 
+		public DbSet<SocialMedia> SocialMedias {  get; set; }
+
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		{
+			if (!optionsBuilder.IsConfigured)
+			{
+				// Buraya kendi bağlantı cümleni yaz
+				optionsBuilder.UseSqlServer("Server=BERAT\\SQLEXPRESS;Database=ETicaretDb;Trusted_Connection=True;TrustServerCertificate=True;");
+			}
+		}
 	}
 }
