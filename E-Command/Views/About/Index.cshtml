@@ -1,0 +1,23 @@
+﻿@using E_Command.Models.Class
+@model List<About>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<section class="client-reviews">
+    <div class="reviews">
+        <h3>Client Reviews</h3>
+        
+        @foreach (var item in Model){
+            <img src="@item.ImageUrl" alt="">
+            <p>
+                @item.Description
+            </p>
+        }
+        
+
+        <h2>Mark Jevenue</h2>
+        <p></p>
+    </div>
+</section>
